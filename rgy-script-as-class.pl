@@ -67,12 +67,13 @@ detail, example, etc.
 
 =cut 
 
+use 5.004;
 use CGI ();
 use strict;
 use vars qw(@ISA);
 @ISA = qw(MyBase);
 
-my ($class) = @_;
+my $class = __PACKAGE__;
 
 my $page = $class->new;
 my $q = CGI->new;

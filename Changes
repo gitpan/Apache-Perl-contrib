@@ -1,3 +1,22 @@
+=item February 23, 1998
+
+updated DCELogin.pm to use register_cleanup instead of PerlLogHandler
+
+removed AuthenDBI.pm (part of the ApacheDBI package on CPAN now)
+
+removed AuthCookie now that an official release is on CPAN
+
+change rgy-script-as-class example to get $class from __PACKAGE__
+instead of from $_[0] 
+
+removed frameset.pl (CGI.pm's example/frameset.cgi works now)
+
+removed catch-shutdown.pm (now that we have PerlChildExitHandler)
+
+added merlyn-test.pl from Randal Schwartz <merlyn@stonehenge.com> 
+
+removed Scoreboard module
+
 =item 09/15/97
 
 added Apache::LowerCaseGETs PerlTransHandler module

@@ -20,6 +20,8 @@ sub handler {
     my($res, $pwd) = $r->get_basic_auth_pw;
     return $res if $res; #decline if not Basic
 
+    $r->register_cleanup(\&purge);
+
     my($status, $ok, $valid, $reset, $auth_src, $uid);
     
     unless($uid = $r->connection->user and $pwd) {
@@ -61,7 +63,7 @@ sub handler {
 sub purge {
     $l->purge_context if $l;
     undef $l;
-    return DECLINED; #well, we didn't really log anything
+    return OK; 
 }
 
 1;
@@ -78,7 +80,6 @@ Apache::DCELogin - Obtain a DCE Login context
  AuthType Basic
  AuthName "DCE-Perl Login"
  PerlAuthenHandler Apache::DCELogin
- PerlLogHandler    Apache::DCELogin::purge
 
 =head1 DESCRIPTION
 
