@@ -4,14 +4,15 @@ use strict;
 use LWP::UserAgent ();
 use Apache::Constants ':common';
 
-sub translate {
+sub handler {
     my($r) = @_;
     return DECLINED unless $r->proxyreq;
     $r->handler("perl-script"); #ok, let's do it
+    $r->push_handlers(PerlHandler => \&proxy_handler);
     return OK;
 }
 
-sub handler {
+sub proxy_handler {
     my($r) = @_;
     my($key,$val);
 
@@ -23,7 +24,7 @@ sub handler {
     }
 
     my $res = (new LWP::UserAgent)->request($request);
-
+    $r->content_type($res->header('Content-type'));
     #feed reponse back into our request_rec*
     $r->status($res->code);
     $r->status_line(join " ", $res->code, $res->message);
@@ -48,8 +49,8 @@ Apache::ProxyPassThru - Skeleton for vanilla proxy
 =head1 SYNOPSIS
 
  #httpd.conf or some such
- PerlTransHandler  Apache::ProxyPassThru::translate
- PerlHandler       Apache::ProxyPassThru
+ PerlTransHandler  Apache::ProxyPassThru
+
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,6 @@
 AcceptLanguage.pm
 AccessLimitNum.pm
+AuthAnon.pm
 AuthCookie/AuthCookie.pm
 AuthCookie/AuthCookieHandler.pm
 AuthCookie/README
@@ -11,10 +12,14 @@ AuthenDBI.pm
 AuthzAge.pm
 Changes
 DCELogin.pm
+DayLimit.pm
 DumpHeaders.pm
+Hello.pm
 HttpEquiv.pm
+LowerCaseGETs.pm
 MANIFEST
 Makefile.PL
+Merlyn-Trans.pm
 MsqlProxy.pm
 PAUSE-Authen.pm
 ProxyPassThru.pm
@@ -26,6 +31,7 @@ Scoreboard/Scoreboard.xs
 Scoreboard/test.pl
 Session.pm
 Sybase-DBlib.pm
+Timeit.pm
 catch-shutdown.pm
 frameset.pl
 pmtest.pl

@@ -1,4 +1,17 @@
+=item 09/15/97
 
+added Apache::LowerCaseGETs PerlTransHandler module
+from Peter Lister <p.lister@cranfield.ac.uk>
+
+added PerlTransHandler example (Merlyn-Trans.pm) 
+from Randal Schwartz <merlyn@stonehenge.com> 
+
+added Apache::Timeit module
+
+added Apache::Hello, Apache::DayLimit and Apache::AuthAnon examples
+from the 1st ORA Perl conference talk
+
+updated Apache::ProxyPassThru
 
 =item 06/26/97
 
