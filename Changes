@@ -1,0 +1,11 @@
+
+
+=item 06/26/97
+
+added PAUSE-Authen.pm from Andreas J. Koenig <k@anna.in-berlin.de>
+
+added AuthCookie package from Eric Bartley <bartley@cc.purdue.edu>
+
+added pmtest.pl script from George Carrette <George_Carrette@iacnet.com>
+
+started maintaining a Changes file
