@@ -1,0 +1,10 @@
+
+
+This directory contains scripts, modules, whatever, that are related to
+mod_perl but not part of the distribution or part of any maintained
+distribution.  These files are here to give you more ideas and direction,
+as to what you can do with mod_perl.  These files need not be polished, 
+finished or even working for that matter, but that's not to say they are not.
+If you have any to add, please let <a href="mailto:dougm@osf.org">me</a>
+know.
+<p>
