@@ -20,5 +20,4 @@ Session.pm
 Sybase-DBlib.pm
 catch-shutdown.pm
 frameset.pl
-mod_include.c.perl
 rgy-script-as-class.pl

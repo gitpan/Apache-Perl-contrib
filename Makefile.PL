@@ -11,7 +11,7 @@ $VERSION =~ s/^/0/ unless length $VERSION == 6;
 
 WriteMakefile(
     NORECURS => 1,
-    'NAME'	=> 'mod_perl-contrib',
+    'NAME'	=> 'Apache-Perl-contrib',
     'VERSION'   => $VERSION,
     'dist'    => {COMPRESS=> 'gzip -9f', SUFFIX=>'gz', 
  	          POSTOP => 'mv $(DISTNAME)-$(VERSION).tar.gz ../'
